@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    /* Remove default margin to ensure full-width layout */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center content horizontally */
+    height: 100vh;
+    /* 100% of the viewport height */
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    position: fixed;
+    top: 50%;
+    /* Position at 50% of viewport height */
+    transform: translateY(-50%);
+    /* Center vertically */
+    width: 100%;
+    /* Full width */
+    z-index: 10;
+    /* Add background color to make it visible on top of the content */
+}
+
+.pagination button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f34444;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 15;
+}
+
+
+.pagination button:last-child {
+    order: 1;
+    /* Move the last child (forward button) to the end */
+}
+
+.pagination button:hover {
+    background-color: #d32f2f;
+}
+
+.pagination-content {
+    padding-top: 20px;
+    /* Adjust the top spacing as needed */
+    margin: 35px;
+    /* Adjust the margin from the title as needed */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-y: auto;
+    /* Allow scrolling within the container */
+    max-height: calc(100vh - 70px);
+    /* Adjust the max height as needed */
+}
